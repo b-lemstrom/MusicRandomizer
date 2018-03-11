@@ -1,0 +1,9 @@
+c:\users\bastian\documents\visual studio 2013\Projects\MusicRandomizer\MusicRandomizer\bin\Debug\MusicRandomizer.exe.config
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\bin\Debug\MusicRandomizer.exe
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\bin\Debug\MusicRandomizer.pdb
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\obj\Debug\MusicRandomizer.csprojResolveAssemblyReference.cache
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\obj\Debug\MusicRandomizer.Form1.resources
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\obj\Debug\MusicRandomizer.Properties.Resources.resources
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\obj\Debug\MusicRandomizer.csproj.GenerateResource.Cache
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\obj\Debug\MusicRandomizer.exe
+C:\Users\Bastian\Documents\Visual Studio 2013\Projects\MusicRandomizer\MusicRandomizer\obj\Debug\MusicRandomizer.pdb
