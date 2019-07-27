@@ -50,8 +50,7 @@ namespace MusicRandomizer
                                                "Confirmation",
                                                MessageBoxButtons.OKCancel,
                                                MessageBoxIcon.Warning
-               );
-                
+               ); //Send to OPEN PLAYLIST IF OK
             }
             else
             {
