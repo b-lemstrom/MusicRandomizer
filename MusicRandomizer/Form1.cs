@@ -25,16 +25,16 @@ namespace MusicRandomizer
         private void playlistbtn_Click(object sender, EventArgs e)
         {
             //Code to open and select a playlist, filtering for .m3u8 playlist-files.
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Playlist Files|*.m3u8";
-            openFileDialog1.Title = "Select a Playlist File";
+            OpenFileDialog openPlaylist = new OpenFileDialog();
+            openPlaylist.Filter = "Playlist Files|*.m3u8";
+            openPlaylist.Title = "Select a Playlist File";
 
             //Gather chosen playlist.
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (openPlaylist.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             { 
-                string filename = openFileDialog1.FileName;
+                string filename = openPlaylist.FileName;
                 lines = File.ReadAllLines(filename);
-                string display = openFileDialog1.SafeFileName;
+                string display = openPlaylist.SafeFileName;
                 display = display.Replace("_", " ");
                 playlistlbl.Text = "Playlist: " + display.Replace(".m3u8", " ");
             }
@@ -65,7 +65,35 @@ namespace MusicRandomizer
                 string second = lines[x];
                 second = second.Replace("#EXTINF:", "");
                 second = second.Remove(0, 4);
+                randomSongs(second);
                 outputlbl.Text = "Song: " + second;
+            }
+        }
+        // Create a list to store the songs that hav been randomized.
+
+        // --------------
+
+        // Create an option to cache the playlist. To avoid having to reselect the same file everytime the program starts.
+        private void randomSongs(string song)
+        {
+            string s = song;
+            string path = System.IO.Directory.GetCurrentDirectory();
+            string filename = "Playlist_" + DateTime.Now.ToString("yyyy/MM/dd") + ".txt";
+            path = System.IO.Path.Combine(path, filename);
+            Console.WriteLine();
+            if (!System.IO.File.Exists(path))
+            {
+                using (System.IO.StreamWriter fs = new System.IO.StreamWriter(path))
+                {
+                    fs.WriteLine(s);
+                }
+            }
+            else
+            {
+                using (System.IO.StreamWriter fs = new System.IO.StreamWriter(path, true))
+                {
+                    fs.WriteLine(s);
+                }
             }
         }
 
